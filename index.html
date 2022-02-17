@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>로그인</title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <!-- <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script> -->
+    <script>
+
+        $(function () {
+            $('#form').submit(function () {
+                let id = $('#id').val();
+                let password = $('#password').val();
+                if (!id) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '아이디를 입력하세요.'
+                    });
+                    $('#id').focus();
+                    return false;
+                } else if (!password) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '비밀번호를 입력하세요.'
+                    });
+                    $('#password').focus();
+                    return false;
+                } else if (id != "user") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '비밀번호가 틀립니다.'
+                    });
+                    $('#id').focus();
+                    return false;
+                } else if (password != "1234") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '비밀번호가 틀립니다.'
+                    });
+                    $('#password').focus();
+                    return false;
+                }
+                else {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '레벨을 선택하세요!',
+                        text: '',
+                        showConfirmButton: true,
+                        showCancelButton: true,
+                        confirmButtonText: '확인',
+                        cancelButtonText: '취소',
+                        input:'select',
+                        inputOptions:{
+                            level1:'1단계',
+                            level2:'2단계',
+                            level3:'3단계',
+                        }
+                    })
+                        .then((result) => {
+                            console.log(result.value)
+                            switch (result.value) {
+                                case 'level1':
+                                location.href = "oneDay.html";
+                                    break;
+                                case 'level2':
+                                location.href = "oneDayTwo.html";
+                                    break;
+                                case 'level3':
+                                location.href = "oneDayThree.html";
+                                    break;
+                                
+                                default:
+                                    break;
+                            }
+                            /* Read more about isConfirmed, isDenied below */
+                            // if (result.isConfirmed) {
+                            //     location.href = "http://www.naver.com";
+                            // }
+                            // else if (result.isDenied) {
+                            //     location.href = "https://www.daum.net";
+                            // }
+                            // else if (result.isCanceled) {
+                            //     location.href = "8.8.8.8";
+                            // }
+                        })
+
+
+                    $('#join').focus();
+                    return false;
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body translate="no">
+    <div class="wrapper">
+        <div class="container">
+            <!-- <h1>Welcome</h1> -->
+            <h1 id="twoQ" style="font-style: italic; font-family: 'jua', Helvetica, sans-serif;">하루에 두 문제</h1>
+            <form id="form">
+                <input type='text' placeholder="아이디를 입력해주세요." onfocus="this.placeholder=''"
+                    onblur="this.placeholder='아이디를 입력해주세요.'" id='id' autocomplete="off">
+                <input type='password' placeholder="비밀번호를 입력해주세요." onfocus="this.placeholder=''"
+                    onblur="this.placeholder='비밀번호를 입력해주세요.'" id='password' autocomplete="off">
+                <button type="submit" id="login-button">Login</button><br><br>
+                <input type="button" id="login-button" value="회원가입" onClick="location.href='signup.html'">
+                </input>
+                <div id=user1234>
+                    id: user<br>
+                    pass: 1234
+                </div>
+            </form>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- <div class="container1">
+        <div class="container">
+            <form id="form">
+                <h2>로그인</h2>
+                <hr>
+                <table>
+                    <tr>
+                        <th>아이디</th>
+                        <td><input type='text' placeholder="아이디를 입력해주세요." onfocus="this.placeholder=''"
+                                onblur="this.placeholder='아이디를 입력해주세요.'" id='id'></td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td><input type='password' placeholder="비밀번호를 입력해주세요." onfocus="this.placeholder=''"
+                                onblur="this.placeholder='비밀번호를 입력해주세요.'" id='password'></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="padding: 20px; text-align: center;">
+                            <input type='submit' value='로그인'>&nbsp;
+                            <input type='reset' value='취소'>&nbsp;
+                            <input type="button" value="회원가입" onClick="location.href='myjoin.html'">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="padding: 20px; text-align: left; opacity:0.2;">
+                            id : uesr<br>
+                            password: 1234</td>
+                    </tr>
+
+
+                </table>
+            </form>
+        </div>
+    </div> -->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+
+</html>

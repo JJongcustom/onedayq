@@ -1,0 +1,877 @@
+/* 글씨체 */
+@font-face {
+
+  src : url("./Jua.ttf"); 
+
+  font-family: "jua" 
+
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap'); */
+
+/* user 투명도 */
+#user1234 {
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* 타이머 */
+#demo {
+  font-size: 80px;
+  color: #00BC82;
+  text-shadow: 5px 5px 5px #C6B7A3;
+  /*보라색 */
+  position: static;
+  /* float: center; */
+  text-align: center;
+  font-family: 'Jua', sans-serif;
+}
+
+/* 로그인 firstlogin    23 ~266 next hint popup */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v18/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v18/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+body {  /*원데이*/
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+body ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: 300;
+  text-align: center;
+  opacity: 0.3;
+}
+#form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+body :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: green;
+  opacity: 1;
+  font-weight: 300;
+}
+body ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: red;
+  opacity: 1;
+  font-weight: 300;
+}
+body :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: blue;
+  font-weight: 300;
+}
+.wrapper { /* 로그인*/
+  background: #50a3a2;
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 440px;
+  margin-top: -200px;
+  overflow: hidden;
+}
+.wrapper2 { /* 회원가입 */  
+  background: #50a3a2;
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  margin-top: -300px;
+  overflow: hidden;
+}
+.wrapper.form-success .container h1 {
+  transform: translateY(85px);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+  height: 400px;
+  text-align: center;
+}
+.container h1 {
+  font-size: 40px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-put;
+  font-weight: 200;
+}
+form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+form input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: #53e3a6;
+}
+form button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+}
+form button:hover {
+  background-color: #f5f7f9;
+}
+.bg-bubbles {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+  transition-timing-function: linear;
+}
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+          animation-duration: 17s;
+}
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 22s;
+          animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+}
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+@-webkit-keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+@keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+
+/* 로그인 여기까지 */
+
+/* hint popup  269~346 next switch*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+a.btn {
+  width: 110px;
+  position: absolute;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0;
+  background: #C6B7A3;    /* 힌트보기 버튼 배경색*/
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(41, 171, 164, 0.8);
+  visibility: hidden;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+.modal {
+  width: 600px!important;
+  height: 400px!important;
+  display: block!important;
+  margin: 50% 0 0 -300px;
+  position: absolute!important;
+  top: 50%!important;
+  left: 50%!important;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper.open .modal {
+  margin-top: -200px;
+  opacity: 1;
+}
+
+.head {
+  width: 100%;
+  height: 50px;
+  padding: 12px 30px;
+  overflow: hidden;
+  background: #C6B7A3;
+}
+
+
+.btn-close {
+  padding: 15em;
+}
+
+.good-job {
+  margin-top: 70px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #C6B7A3;
+}
+.good-job .fa-thumbs-o-up {
+  font-size: 60px;
+}
+.good-job h1 {
+  font-size: 50px;
+}
+
+/* Switch 348~619 next login*/
+.switch {
+  --c-background-top: #75757D;
+  --c-background-bottom: #45454C;
+  --c-background-top-shadow: rgba(255, 255, 255, .45);
+  --c-background-bottom-shadow: rgba(0, 0, 0, .3);
+  --c-stroke-top: #262626;
+  --c-stroke-bottom: #3D3D43;
+  --c-inner: #6D6D6D;
+  --c-inner-top-shadow: rgba(0, 0, 0, .3);
+  --c-inner-bottom-shadow: rgba(255, 255, 255, .18);
+  --c-inner-inset-shadow: rgba(0, 0, 0, .14);
+  --c-knob-stroke-top: #515151;
+  --c-knob-stroke-bottom: #acacac;
+  --c-knob-inner-top: #8A8A8A;
+  --c-knob-inner-middle-top: #A1A1A1;
+  --c-knob-inner-middle-bottom: #B4B4B4;
+  --c-knob-inner-bottom: #BABABA;
+  --c-knob-inner-shadow-top: rgba(255, 255, 255, .25);
+  --c-knob-inner-shadow-bottom: rgba(0, 0, 0, .3);
+  --c-knob-shadow-1: rgba(7, 7, 37, 0.16);
+  --knob-inner-shadow-top-y: 2.5px;
+  --knob-inner-shadow-bottom-y: -5.5px;
+  --knob-shadow-1-y: 20px;
+  --knob-shadow-1-blur: 20px;
+  --knob-shadow-1-spread: 0;
+  --knob-shadow-2-y: 12.5px;
+  --knob-shadow-2-blur: 8.5px;
+  --knob-shadow-3-y: 6.5px;
+  --knob-shadow-3-blur: 4.5px;
+  --knob-shadow-4-y: 4px;
+  --knob-shadow-4-blur: 2.5px;
+  --knob-shadow-7-y: 15px;
+  --top-shadow-blur: 5px;
+  --inner-bottom-shadow-blur: 1.25px;
+  --shine-top-opacity: 0;
+  --shine-top-y: -5px;
+  --shine-bottom-opacity: 1;
+  --shine-bottom-y: 0px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: fixed;
+  cursor: pointer;
+  border-radius: 36px;
+  box-shadow: 0 4px 2.5px rgba(0, 0, 0, 0.0525), 0 8px 4.5px rgba(0, 0, 0, 0.065), 0 12px 8px rgba(0, 0, 0, 0.17), 0 22.5px 14.5px rgba(0, 0, 0, 0.07), 0 35px 25px rgba(0, 0, 0, 0.08), 0 20px 15px rgba(0, 0, 0, 0.05);
+}
+.switch.active {
+  --c-background-top: #F0F0F0;
+  --c-background-bottom: #E9E9E9;
+  --c-background-top-shadow: #fff;
+  --c-background-bottom-shadow: rgba(0, 0, 0, .18);
+  --c-stroke-top: #E7E7E7;
+  --c-stroke-bottom: #D0D0D0;
+  --c-inner: #EAEAEA;
+  --c-inner-top-shadow: rgba(156, 56, 0, 0.42);
+  --c-inner-bottom-shadow: #FFF3E5;
+  --c-inner-inset-shadow: rgba(0, 0, 0, .2);
+  --c-knob-stroke-top: #cc4528;
+  --c-knob-stroke-bottom: #f05f21;
+  --c-knob-inner-top: #E94714;
+  --c-knob-inner-middle-top: #E85617;
+  --c-knob-inner-middle-bottom: #FF7324;
+  --c-knob-inner-bottom: #FF844F;
+  --c-knob-inner-shadow-top: rgba(255, 170, 109, 0.45);
+  --c-knob-inner-shadow-bottom: rgba(244, 44, 0, 0.9);
+  --c-knob-shadow-1: rgba(255, 180, 175, 0.7);
+  --knob-inner-shadow-top-y: 5.5px;
+  --knob-inner-shadow-bottom-y: -1.5px;
+  --knob-shadow-1-y: 0;
+  --knob-shadow-1-blur: 2px;
+  --knob-shadow-1-spread: 5px;
+  --knob-shadow-2-y: 6.5px;
+  --knob-shadow-2-blur: 4.5px;
+  --knob-shadow-3-y: 3.5px;
+  --knob-shadow-3-blur: 2.5px;
+  --knob-shadow-4-y: 2px;
+  --knob-shadow-4-blur: 1.5px;
+  --knob-shadow-7-y: 5px;
+  --top-shadow-blur: 3px;
+  --inner-bottom-shadow-blur: 1px;
+  --shine-top-opacity: 1;
+  --shine-top-y: 0px;
+  --shine-bottom-opacity: 0;
+  --shine-bottom-y: 5px;
+}
+.switch:before, .switch:after {
+  content: '';
+  display: block;
+  width: var(--size, 120px);
+  height: var(--size, 120px);
+  -webkit-clip-path: url(#shape);
+          clip-path: url(#shape);
+}
+.switch:before {
+  --size: 124px;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--c-stroke-top)), to(var(--c-stroke-bottom)));
+  background: linear-gradient(var(--c-stroke-top), var(--c-stroke-bottom));
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  -webkit-clip-path: url(#shape-outer);
+          clip-path: url(#shape-outer);
+}
+.switch:after {
+  box-shadow: inset 0 3px var(--top-shadow-blur) var(--c-background-top-shadow), inset 0 -5px 5px var(--c-background-bottom-shadow);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--c-background-top)), to(var(--c-background-bottom)));
+  background: linear-gradient(var(--c-background-top), var(--c-background-bottom));
+  border-radius: 36px;
+}
+.switch .inner {
+  width: 40px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 12.5px;
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  z-index: 1;
+  background: var(--c-inner);
+  box-shadow: 0 -1.5px 1.5px var(--c-inner-top-shadow), 0 1.5px var(--inner-bottom-shadow-blur) var(--c-inner-bottom-shadow), inset 0 5px 14px var(--c-inner-inset-shadow);
+}
+.switch .inner:before, .switch .inner:after {
+  content: '';
+  display: block;
+}
+.switch .inner:before {
+  width: 30px;
+  height: 50px;
+  border-radius: 9px;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--c-knob-stroke-top)), to(var(--c-knob-stroke-bottom)));
+  background: linear-gradient(var(--c-knob-stroke-top), var(--c-knob-stroke-bottom));
+  box-shadow: 0 var(--knob-shadow-1-y) var(--knob-shadow-1-blur) var(--knob-shadow-1-spread) var(--c-knob-shadow-1), 0 var(--knob-shadow-2-y) var(--knob-shadow-2-blur) rgba(7, 7, 37, 0.07), 0 var(--knob-shadow-3-y) var(--knob-shadow-3-blur) rgba(7, 7, 37, 0.13), 0 var(--knob-shadow-4-y) var(--knob-shadow-4-blur) rgba(7, 7, 37, 0.11), 0 2px 1.5px rgba(7, 7, 37, 0.09), 0 0.85px 0.5px rgba(7, 7, 37, 0.05), 0 var(--knob-shadow-7-y) 15px rgba(0, 0, 0, 0.25);
+}
+.switch .inner:after {
+  width: 28px;
+  height: 48px;
+  border-radius: 8.5px;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--c-knob-inner-top)), color-stop(var(--c-knob-inner-middle-top)), color-stop(var(--c-knob-inner-middle-bottom)), to(var(--c-knob-inner-bottom)));
+  background: linear-gradient(var(--c-knob-inner-top), var(--c-knob-inner-middle-top), var(--c-knob-inner-middle-bottom), var(--c-knob-inner-bottom));
+  box-shadow: inset 0 var(--knob-inner-shadow-top-y) 1.5px var(--c-knob-inner-shadow-top), inset 0 var(--knob-inner-shadow-bottom-y) 1.25px var(--c-knob-inner-shadow-bottom);
+}
+.switch .inner .shine {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.1)), color-stop(70%, rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 70%) 1 100%;
+       -o-border-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 70%) 1 100%;
+          border-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.1)), color-stop(70%, rgba(0, 0, 0, 0))) 1 100%;
+          border-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 70%) 1 100%;
+}
+.switch .inner .shine:before, .switch .inner .shine:after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  height: 9px;
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 14px, black 50%, black calc(100% - 14px), transparent 100%);
+  mask-image: linear-gradient(to left, transparent 0%, black 14px, black 50%, black calc(100% - 14px), transparent 100%);
+}
+.switch .inner .shine:before {
+  border-radius: 11px 11px 0 0;
+  border-top: 1px solid #fff;
+  top: 11px;
+  opacity: var(--shine-top-opacity);
+  -webkit-transform: translateY(var(--shine-top-y));
+          transform: translateY(var(--shine-top-y));
+}
+.switch .inner .shine:after {
+  border-radius: 0 0 11px 11px;
+  border-bottom: 1px solid #fff;
+  bottom: 11px;
+  opacity: var(--shine-bottom-opacity);
+  -webkit-transform: translateY(var(--shine-bottom-y));
+          transform: translateY(var(--shine-bottom-y));
+}
+
+.hint {
+  width: 228px;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #93939F;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-transform: translate(-50%, 100px);
+          transform: translate(-50%, 100px);
+  -webkit-animation: show .35s linear forwards;
+          animation: show .35s linear forwards;
+}
+.hint a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #1ca2f1;
+}
+.hint a svg {
+  width: 71px;
+  height: 38px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 5px) translateZ(0);
+          transform: translate(-50%, 5px) translateZ(0);
+  fill: none;
+  stroke: #1ca2f1;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  -webkit-transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+.hint a:hover {
+  --stroke-delay: .1s;
+  --offset: 180px;
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0.2;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0.2;
+  }
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+/* 
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #27272B;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-transition: background 0.15s cubic-bezier(0.532, 0, 0.924, 0.862);
+  transition: background 0.15s cubic-bezier(0.532, 0, 0.924, 0.862);
+} */
+body.active {
+  background: #373737;
+}
+/* 로그인 창  */
+.link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px; height: 50px;
+  background: #453127;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: box-shadow 0.3s;
+}
+.link:hover {
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.5)
+}
+
+/* body {
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+    margin:0px;
+    
+    font-family: 'Ubuntu', sans-serif;
+      background-size: 100% 110%;
+      /* overflow: hidden;
+      opacity: 0;
+      transition: opacity .65s .15s 
+  } */
+  body {
+    min-width: 1000px;
+    min-height: calc(100vh - 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: whitesmoke;
+  }
+  
+  svg {
+    flex-shrink: 0;
+    width: 600px;
+    max-width: 90vw;
+  }
+  /*  로그인 */
+  .container1 {
+    /* margin: 10vh 10vw 10vh 10vw; */
+    text-align: center;
+    background-color: whitesmoke;
+  }
+
+  /*    바디랑 svg 마우스 쳐다보는 여자*/
+
+
+body.reveal {
+    opacity: 1;
+    overflow-y: auto
+}
+body.hidden {
+    opacity: 0
+}
+    
+  h1, h2, h3, h4, h5, h6, a {
+    margin:0; padding:0;
+  }
+  /* 로그인 창 */
+  .login {
+    /* margin:0 auto; */  
+    width:500px;
+  }
+  .login-header {
+    color:#00BC82; text-shadow: 6px 6px 6px #E3D0B7;
+    text-align:center;
+    font-size:300%;
+    width:100%;
+    font-family: 'Jua', sans-serif;
+  }
+  .login-header h1 {
+     /* text-shadow: 0px 5px 15px #000; */
+    padding-top:0px;
+     font-size: 90px;
+    }
+
+  /* .login-form {
+    border:.5px solid #fff;
+    background:#E86850;
+    border-radius:10px;
+    box-shadow:0px 0px 10px #000;
+  } */
+ 
+  .login-form h3 {
+
+    text-align:center;
+    margin-top:10px;
+    color:#00A673; text-shadow: 3px 3px 3px #C6B7A3;
+    font-size: 40px;
+    font-family: 'Jua', sans-serif;
+  }
+  .login-form {
+    box-sizing:border-box;
+    padding-top:15px;
+      padding-bottom:10%;
+    /* margin:10% auto; */
+    text-align:center;
+    width:100%;
+    white-space : nowrap;   /*텍스트 자동 줄바꿈을 한줄로 변경*/
+
+  }
+  .login input[type="text"],
+  .login input[type="text"] {
+    max-width:400px;
+      width: 80%;
+    line-height:3em;
+    font-family: 'Ubuntu', sans-serif;
+    margin:1em 2em;
+    border-radius:10px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding-left:10px;
+  }
+  .login-form .login-a {
+    display: inline-block;
+    height:30px;
+    width:100px;
+    background:#fff;
+    border:1px solid #f2f2f2;
+    border-radius:20px;
+    color: slategrey;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+  }
+  .sign-up{
+    color:#f2f2f2;
+    margin-left:-70%;
+    cursor:pointer;
+    text-decoration:underline;
+  }
+  .no-access {
+    color:#E86850;
+    margin:20px 0px 20px -57%;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  .try-again {
+    color:#00422f;
+    text-decoration:underline;
+    cursor:pointer;
+    float: center;
+    width: fit-content;
+  }
+  .reload-page{
+    display: inline-block;
+  }
+  /* .try-again2 {
+    color:#00422f;
+    text-decoration:underline;
+    cursor:pointer;
+    float: center;
+  } */
+  .audio {
+    width: 300px;
+    height: 54px;
+}
+  /* 여기까지 */
+  
+/* 치매센터 로고 */
+.Alogo1 {
+  width: 100px;
+}
+.Alogo2 {
+  width: 200px;
+}
+.Alogo3 {
+  width: 580px;
+}
+/* 여기까지 */
+
+.hide {
+  display: none;
+}
+
+/*  */
+#navbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  height: 50px;
+  /* padding: 1rem; */
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6fdcbf !important;
+  font-family: 'Cabin', sans-serif !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+}
+
+ul h1:nth-child(1) {
+  display: contents;
+  vertical-align: middle;
+  font-family: 'Jua', sans-serif;
+  font-size: 35px !important;
+}
+
+/* main {
+  padding: 1rem;
+  height: 100%;  
+} */
+
+/* 
+* {
+  box-sizing: border-box;
+} */
+/*  */
+
+  /* 팝업창 */
+  body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+  /*  */
+
+   /*Media Querie*/
+   @media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h3 {
+      text-align:center;
+      margin:0;
+    }
+    .sign-up, .no-access {
+      margin:10px 0;
+    }
+    .login-button {
+      margin-bottom:10px;
+    }
+  }
+ 
+
+  
