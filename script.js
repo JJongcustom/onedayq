@@ -174,35 +174,8 @@ jQuery(function ($) {
 
 
 
-$('.error-page').hide(0);
-
-$('.login-button , .no-access').click(function () {
-    $('.login').slideUp(500);
-    $('.error-page').slideDown(1000);
-});
-
-$('.try-again').click(function () {
-    $('.error-page').hide(0);
-    $('.login').slideDown(1000);
-});
-
-// function play() {
-
-//     let audio = document.getElementById("audio");
-//     // alert(audio);
-//     // audio.play();
-//     // play();
-// }
 
 
-// let sValue = ["one", "two", "three", "four", "five"];
-// let sPick = Math.floor(Math.random() * sValue.length);
-// console.log(sPick);
-// 5개의 값 중 랜덤으로 하나 출력됨
-
-// window.onpopstate = function(event) {
-// 	alert("location: " + document.location + ", state: " + JSON.stringify(event.state)); 
-// }   //뒤로가기 막기
 
 
 
